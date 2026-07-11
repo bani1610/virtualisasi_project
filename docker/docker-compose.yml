@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  app1:
+    build: ./app1
+    container_name: app1
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=192.168.56.10
+      - DB_PORT=3306
+      - DB_NAME=app1_db
+      - DB_USER=app1_user
+      - DB_PASS=${APP1_DB_PASS}
+    restart: unless-stopped
+
+  app2:
+    build: ./app2
+    container_name: app2
+    ports:
+      - "3001:3000"
+    environment:
+      - DB_HOST=192.168.56.10
+      - DB_PORT=3306
+      - DB_NAME=app2_db
+      - DB_USER=app2_user
+      - DB_PASS=${APP2_DB_PASS}
+    restart: unless-stopped
