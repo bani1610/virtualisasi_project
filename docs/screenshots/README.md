@@ -5,7 +5,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.2 — Router MikroTik
+## 4.2 — Router MikroTik.
 
 | File | Command | Keterangan |
 |------|---------|------------|
@@ -14,7 +14,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.3 — Firewall Filter MikroTik
+## 4.3 — Firewall Filter MikroTik.
 
 | File | Isi | Rule # |
 |------|-----|--------|
@@ -24,7 +24,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.4 — Nginx
+## 4.4 — Nginx.
 
 | File | Command | Keterangan |
 |------|---------|------------|
@@ -35,7 +35,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.5 — Docker & Aplikasi
+## 4.5 — Docker & Aplikasi.
 
 | File | Command | Keterangan |
 |------|---------|------------|
@@ -46,7 +46,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.6 — Database
+## 4.6 — Database.
 
 | File | Command | Keterangan |
 |------|---------|------------|
@@ -57,7 +57,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 4.7 — Suricata
+## 4.7 — Suricata.
 
 | File | Command | Keterangan |
 |------|---------|------------|
@@ -67,7 +67,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## 6 — Hasil Pengujian
+## 6 — Hasil Pengujian.
 
 | File | Skenario | Hasil |
 |------|----------|-------|
@@ -81,7 +81,7 @@ Nama file menggunakan format: `[nomor-poin]-[deskripsi].png`
 
 ---
 
-## Screenshot yang Perlu Ditambah
+## Screenshot yang Perlu Ditambah.
 
 | Poin | Yang Kurang |
 |------|-------------|
