@@ -1,0 +1,5 @@
+alert http any any -> any any (msg:"Custom SQL Injection Attempt"; flow:to_server,established; content:"union select"; nocase; http_uri; sid:1000001; rev:1;)
+
+alert http any any -> any any (msg:"Custom XSS Attempt Detected"; flow:to_server,established; content:"<script>"; nocase; http_uri; sid:1000002; rev:1;)
+
+alert tcp any any -> $HOME_NET any (msg:"Custom Port Scan Detected"; flags:S; threshold: type both, track by_src, count 20, seconds 10; sid:1000003; rev:1;)

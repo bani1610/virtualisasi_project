@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-07-12T08:08:26.039673+0000",
+  "in_iface": "enp0s3",
+  "event_type": "alert",
+  "pkt_src": "wire/pcap",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 2200121,
+    "rev": 1,
+    "signature": "SURICATA Ethertype unknown",
+    "category": "Generic Protocol Command Decode",
+    "severity": 3
+  }
+}
+{
+  "timestamp": "2026-07-12T08:08:26.035423+0000",
+  "in_iface": "enp0s3",
+  "event_type": "alert",
+  "pkt_src": "wire/pcap",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 2200121,
+    "rev": 1,
+    "signature": "SURICATA Ethertype unknown",
+    "category": "Generic Protocol Command Decode",
+    "severity": 3
+  }
+}
+{
+  "timestamp": "2026-07-12T08:08:56.038080+0000",
+  "in_iface": "enp0s3",
+  "event_type": "alert",
+  "pkt_src": "wire/pcap",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 2200121,
+    "rev": 1,
+    "signature": "SURICATA Ethertype unknown",
+    "category": "Generic Protocol Command Decode",
+    "severity": 3
+  }
+}
+{
+  "timestamp": "2026-07-12T08:08:56.038080+0000",
+  "in_iface": "enp0s3",
+  "event_type": "alert",
+  "pkt_src": "wire/pcap",
