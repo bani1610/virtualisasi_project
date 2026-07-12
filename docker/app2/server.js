@@ -14,13 +14,41 @@ const db = mysql.createPool({
   connectionLimit: 5,
 });
 
-// Root — status app + waktu server
+// Root — tampilkan halaman HTML dengan data dari DB
 app.get('/', async (req, res) => {
   try {
-    await db.query('SELECT 1');
-    res.send('Halo dari App2! Waktu server: ' + new Date().toISOString() + ' | DB: connected');
+    const [rows] = await db.query('SELECT * FROM products');
+    const rows_html = rows.map(p =>
+      `<tr><td>${p.id}</td><td>${p.name}</td><td>Rp ${Number(p.price).toLocaleString('id-ID')}</td></tr>`
+    ).join('');
+    res.send(`<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>App2 - Data Products</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; background: #f5f5f5; }
+    h1 { color: #1a252f; }
+    .status { background: #27ae60; color: white; padding: 6px 14px; border-radius: 4px; font-size: 13px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    th { background: #1a252f; color: white; padding: 12px; text-align: left; }
+    td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+    tr:last-child td { border-bottom: none; }
+    .meta { color: #888; font-size: 13px; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>App2 <span class="status">DB: connected</span></h1>
+  <p>Database: <strong>app2_db</strong> &mdash; Tabel: <strong>products</strong></p>
+  <table>
+    <thead><tr><th>ID</th><th>Nama Produk</th><th>Harga</th></tr></thead>
+    <tbody>${rows_html}</tbody>
+  </table>
+  <p class="meta">Waktu server: ${new Date().toISOString()}</p>
+</body>
+</html>`);
   } catch (err) {
-    res.status(500).send('Halo dari App2! Waktu server: ' + new Date().toISOString() + ' | DB: ' + err.message);
+    res.status(500).send(`<h2>App2 - DB Error</h2><pre>${err.message}</pre>`);
   }
 });
 
