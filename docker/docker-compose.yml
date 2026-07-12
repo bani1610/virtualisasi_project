@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DB_HOST=192.168.56.10
+      - DB_HOST=192.168.54.10
       - DB_PORT=3306
       - DB_NAME=app1_db
       - DB_USER=app1_user
@@ -19,7 +19,7 @@ services:
     ports:
       - "3001:3000"
     environment:
-      - DB_HOST=192.168.56.10
+      - DB_HOST=192.168.54.10
       - DB_PORT=3306
       - DB_NAME=app2_db
       - DB_USER=app2_user
